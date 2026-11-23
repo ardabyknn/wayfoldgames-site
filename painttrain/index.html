@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en" data-assets="../assets/painttrain/">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Paint Train · Wayfold Games</title>
+<meta name="description" content="Paint Train by Wayfold Games: sort the colored wagons and send every train home. Play a demo level in your browser.">
+<meta name="theme-color" content="#0f122b">
+<meta property="og:title" content="Paint Train · Wayfold Games">
+<meta property="og:description" content="Paint Train by Wayfold Games: sort the colored wagons and send every train home. Play a demo level in your browser.">
+<meta property="og:image" content="https://wayfoldgames.com/assets/painttrain/share.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="../assets/painttrain/favicon-32.png">
+<link rel="apple-touch-icon" href="../assets/painttrain/apple-touch-icon.png">
+<link rel="stylesheet" href="../assets/painttrain/painttrain.css">
+</head>
+<body>
+<header class="hud">
+<a class="brand" href="./">PAINT <span>TRAIN</span></a>
+<a class="by" href="../">by Wayfold Games</a>
+<nav aria-label="Paint Train"><a href="#play">Play</a><a href="#game">The Game</a><a href="../support/">Support</a></nav>
+<button class="chip" id="coins" type="button" title="Coins (just for fun, saved in this browser)"><img src="../assets/painttrain/game/coin.webp" alt="Coins"><b>0</b></button>
+<button class="chip" id="trophies" type="button" title="Achievements"><img src="../assets/painttrain/game/star.webp" alt="Achievements"><b>0/6</b></button>
+<button class="chip icon off" id="sound" type="button" aria-pressed="false" title="Sound off"><img src="../assets/painttrain/game/sound.webp" alt="Sound"></button>
+</header>
+<div class="trophies" id="trophy-panel" role="dialog" aria-modal="true" aria-label="Achievements">
+<div class="panel"><h3>ACHIEVEMENTS</h3><ul></ul><div class="close"><button class="btn yellow small" type="button">CLOSE</button></div></div>
+</div>
+<main>
+<section class="hero">
+<div class="sky" aria-hidden="true"></div><div class="stars" aria-hidden="true"></div>
+<img class="gameicon" src="../assets/games/painttrain/icon-512.png" width="512" height="512" alt="Paint Train app icon">
+<h1><span class="word">PAINT</span> <span class="word">TRAIN</span></h1>
+<p class="tag">Sort the colored wagons and send every train home.</p>
+<div class="ctas"><a class="btn yellow" href="#play">PLAY THE DEMO</a><a class="btn teal" href="#game">SEE THE WORLDS</a></div>
+<div class="parade" aria-hidden="true"><div class="rails"></div><div class="train"><img class="car" src="../assets/painttrain/game/wagon_3.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_2.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_1.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_0.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_2.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_3.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_0.webp" alt="" draggable="false"><img class="car" src="../assets/painttrain/game/wagon_1.webp" alt="" draggable="false"><img class="loco" src="../assets/painttrain/game/locomotive.webp" alt="" draggable="false"></div></div>
+</section>
+
+<section class="block" id="play">
+<div class="section-title"><span class="num">1</span><h2>PLAY A LEVEL</h2></div>
+<p class="section-sub">Tap a track to pick up the wagons at its open end, then tap where they should go. Fill a track with one color and the train leaves.</p>
+<div class="panel yard" id="yard">
+<div class="yard-hud">
+<span class="plate">DEMO LEVEL</span>
+<span class="plate">MOVES <b id="moves">0</b></span>
+<span><button class="btn yellow small" id="hint" type="button">HINT</button> <button class="btn navy small" id="retry" type="button">RETRY</button></span>
+</div>
+<div class="tracks"></div>
+<div class="win" role="dialog" aria-label="Level cleared">
+<div class="card panel"><span class="tab">DEMO LEVEL</span><h3>ALL DEPARTED</h3><div class="stars"></div>
+<div class="stats"><span class="plate">MOVES <b id="win-moves">0</b></span><span class="plate"><img src="../assets/painttrain/game/coin.webp" width="26" height="26" alt="Coins"> <b id="win-coins">+0</b></span></div>
+<div class="buttons"><button class="btn yellow small" id="again" type="button">PLAY AGAIN</button><a class="btn teal small" href="#game">GET THE GAME</a></div></div>
+</div>
+</div>
+<p class="howto">Green signal: the wagons fit. Red signal: too many for that track, they will run off the end.</p>
+</section>
+
+<section class="block" id="game">
+<div class="section-title"><span class="num">2</span><h2>THE GAME</h2></div>
+<p class="section-sub">A train yard puzzle: pick up the wagons at the open end of a track, push them onto another and fill each track with one color. Plan your moves, watch the signals and never derail.</p>
+<article class="panel game">
+<img class="icon" src="../assets/games/painttrain/icon-512.png" width="512" height="512" alt="">
+<div>
+<span class="boarding">NOW BOARDING</span>
+<h3>PAINT TRAIN</h3>
+<ul class="facts"><li>200 puzzles</li><li>10 worlds</li><li>A new twist in every world</li></ul>
+</div>
+<div class="wide worlds" aria-label="The ten worlds"><div class="world"><img src="../assets/painttrain/game/world_night.webp" width="92" height="92" loading="lazy" alt="">Night Yard</div><div class="world"><img src="../assets/painttrain/game/world_harbor.webp" width="92" height="92" loading="lazy" alt="">Harbor</div><div class="world"><img src="../assets/painttrain/game/world_mountain.webp" width="92" height="92" loading="lazy" alt="">Snow Pass</div><div class="world"><img src="../assets/painttrain/game/world_canyon.webp" width="92" height="92" loading="lazy" alt="">Sunset Canyon</div><div class="world"><img src="../assets/painttrain/game/world_city.webp" width="92" height="92" loading="lazy" alt="">Neon City</div><div class="world"><img src="../assets/painttrain/game/world_woods.webp" width="92" height="92" loading="lazy" alt="">Autumn Woods</div><div class="world"><img src="../assets/painttrain/game/world_coast.webp" width="92" height="92" loading="lazy" alt="">Tropic Coast</div><div class="world"><img src="../assets/painttrain/game/world_blossom.webp" width="92" height="92" loading="lazy" alt="">Blossom Hills</div><div class="world"><img src="../assets/painttrain/game/world_moor.webp" width="92" height="92" loading="lazy" alt="">Storm Moor</div><div class="world"><img src="../assets/painttrain/game/world_terminal.webp" width="92" height="92" loading="lazy" alt="">Golden Terminal</div></div>
+<div class="wide shots" aria-label="Screenshots"><img src="../assets/painttrain/shots/01.jpg" width="400" height="869" loading="lazy" alt="Sort the wagons"><img src="../assets/painttrain/shots/02.jpg" width="400" height="869" loading="lazy" alt="Send trains home"><img src="../assets/painttrain/shots/03.jpg" width="400" height="869" loading="lazy" alt="10 worlds to explore"><img src="../assets/painttrain/shots/04.jpg" width="400" height="869" loading="lazy" alt="New twist every world"><img src="../assets/painttrain/shots/05.jpg" width="400" height="869" loading="lazy" alt="Plan your moves"><img src="../assets/painttrain/shots/06.jpg" width="400" height="869" loading="lazy" alt="Earn 3 stars"></div>
+<div class="wide status"><span class="soon">COMING SOON TO THE APP STORE</span><a href="../support/">Support</a><a href="../privacy/">Privacy Policy</a></div>
+</article>
+</section>
+</main>
+<footer class="end">
+<div class="rails" aria-hidden="true"></div>
+<div class="foot"><strong class="display">END OF THE LINE</strong><a href="../">Wayfold Games</a><a href="../support/">Support</a><a href="../privacy/">Privacy Policy</a><a href="../licenses/">Licenses</a><span class="copy">© 2026 Wayfold Games</span></div>
+</footer>
+<script src="../assets/painttrain/painttrain.js" defer></script>
+</body>
+</html>
