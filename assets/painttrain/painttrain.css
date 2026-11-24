@@ -79,7 +79,8 @@ a { color: var(--amber); }
 .parade .train { position: absolute; bottom: 20px; left: 0; display: flex; align-items: flex-end; gap: 0; will-change: transform;
   animation: parade 22s linear infinite; }
 .parade .train img { display: block; height: 68px; width: auto; cursor: pointer; -webkit-user-drag: none; }
-.parade .train img.loco { height: 86px; transform: scaleX(-1); cursor: default; }
+/* The demo's absolute .loco rule must not reach the parade engine: it rides in the flex row, at the front (right), facing the way it moves. */
+.parade .train img.loco { position: static; top: auto; left: auto; width: auto; height: 86px; transform: scaleX(-1); transition: none; cursor: default; }
 .parade:hover .train { animation-play-state: paused; }
 @keyframes parade { from { transform: translateX(-100%); } to { transform: translateX(100vw); } }
 .coin-pop { position: fixed; z-index: 80; pointer-events: none; font-family: var(--display); color: var(--amber); font-size: 1.3rem;
